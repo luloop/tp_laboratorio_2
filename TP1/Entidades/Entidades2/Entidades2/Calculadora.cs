@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Entidades
+namespace Entidades2
 {
-    class Calculadora
+   public class Calculadora
     {
         #region Metodos
 

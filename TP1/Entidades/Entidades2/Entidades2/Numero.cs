@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Entidades
+namespace Entidades2
 {
-    class Numero
+   public class Numero
     {
         private double _Numero;
 
@@ -127,7 +127,7 @@ namespace Entidades
         
         #endregion
 
-        #region Sobrecarga de Operadores
+    #region Sobrecarga de Operadores
 
         public static double operator +(Numero num1, Numero num2)
         {

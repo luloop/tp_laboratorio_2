@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaCalculadora", "LaCalculadora\LaCalculadora.csproj", "{457C58DE-177D-4BAF-B694-C8C9A5E282B8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades2", "..\Entidades\Entidades2\Entidades2\Entidades2.csproj", "{FFB6E643-F77B-42D6-AEDE-C3A1C6AF4EFA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades2", "Entidades2\Entidades2.csproj", "{FFB6E643-F77B-42D6-AEDE-C3A1C6AF4EFA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,10 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{457C58DE-177D-4BAF-B694-C8C9A5E282B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{457C58DE-177D-4BAF-B694-C8C9A5E282B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{457C58DE-177D-4BAF-B694-C8C9A5E282B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{457C58DE-177D-4BAF-B694-C8C9A5E282B8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FFB6E643-F77B-42D6-AEDE-C3A1C6AF4EFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FFB6E643-F77B-42D6-AEDE-C3A1C6AF4EFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFB6E643-F77B-42D6-AEDE-C3A1C6AF4EFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -26,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {E9155B1D-78B1-4CEB-B75C-5E30ACED0E49}
+		SolutionGuid = {61B92A54-0B8D-42A6-AEB3-33AA5180433D}
 	EndGlobalSection
 EndGlobal

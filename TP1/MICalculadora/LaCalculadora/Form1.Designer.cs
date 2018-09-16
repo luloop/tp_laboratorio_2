@@ -48,6 +48,7 @@
             this.btnLimpiar.TabIndex = 0;
             this.btnLimpiar.Text = "LIMPIAR";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnOperar
             // 
@@ -59,6 +60,7 @@
             this.btnOperar.TabIndex = 1;
             this.btnOperar.Text = "OPERAR";
             this.btnOperar.UseVisualStyleBackColor = false;
+            this.btnOperar.Click += new System.EventHandler(this.btnOperar_Click);
             // 
             // button3
             // 
@@ -121,6 +123,7 @@
             this.txtNumero1.Name = "txtNumero1";
             this.txtNumero1.Size = new System.Drawing.Size(242, 30);
             this.txtNumero1.TabIndex = 9;
+            this.txtNumero1.TextChanged += new System.EventHandler(this.txtNumero1_TextChanged);
             // 
             // lblResultado
             // 
