@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaCalculadora", "LaCalculadora\LaCalculadora.csproj", "{457C58DE-177D-4BAF-B694-C8C9A5E282B8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiCalculadora", "LaCalculadora\MiCalculadora.csproj", "{457C58DE-177D-4BAF-B694-C8C9A5E282B8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "..\Entidades\Entidades2\Entidades2\Entidades.csproj", "{FFB6E643-F77B-42D6-AEDE-C3A1C6AF4EFA}"
 EndProject
