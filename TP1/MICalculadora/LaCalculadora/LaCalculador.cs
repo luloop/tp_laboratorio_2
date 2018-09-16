@@ -11,9 +11,9 @@ using Entidades2;
 
 namespace LaCalculadora
 {
-    public partial class Form1 : Form
+    public partial class LaCalculador : Form
     {
-        public Form1()
+        public LaCalculador()
         {
             InitializeComponent();
         }
@@ -47,26 +47,70 @@ namespace LaCalculadora
 
                         lblResultado.Text = Convert.ToString(resultadoss);
                     }
-                    
+                }
+                else
+                {
+                    txtNumero2.Text = "";
                 }
 
             }
-           
+
+            else
+            {
+                txtNumero1.Text = "";
+                txtNumero2.Text = "";
+            }
+
         }
+
+      /*  private double Operar(string numero1, string numero2, string operador)
+        {
+            double num1, num2;
+
+            if (double.TryParse(txtNumero1.Text, out num1))
+            {
+                if (double.TryParse(txtNumero2.Text, out num2))
+                {
+                    if (num1 == 0 && operador == "/")
+                    {
+                       return lblResultado.Text = "Imposible Dividir";
+                    }
+                    else
+                    {
+
+
+                        lblResultado.Text = Convert.ToString(resultadoss);
+                    }
+                }
+                else
+                {
+                    txtNumero2.Text = "";
+                }
+
+            }
+        }
+        */
 
         private void txtNumero1_TextChanged(object sender, EventArgs e)
         {
-           
+
         }
+
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            txtNumero1.Text = "-";
-            txtNumero2.Text = "-";
-            lblResultado.Text = "0";
-            
-
+            limpiar();
         }
+
+        private void limpiar()
+        {
+            txtNumero1.Text = "";
+            txtNumero2.Text = "";
+            lblResultado.Text = "0";
+            cmbOperador.Text = "";
+        }
+
+
 
          /// <summary>
          /// cierra la aplicacion
@@ -80,21 +124,25 @@ namespace LaCalculadora
 
         private void btnConvertirBinario_Click(object sender, EventArgs e)
         {
-             string resultadoss ;        
-                                        
-               resultadoss = Numero.DecimalBinario (txtNumero1.Text);
-               lblResultado.Text = Convert.ToString(resultadoss);
-                    
-
-              
-
+             string resultadoss ;
+            if (lblResultado.Text != " ")
+            {
+                resultadoss = Numero.DecimalBinario(lblResultado.Text);
+                lblResultado.Text = Convert.ToString(resultadoss);
+            }
+  
         }
 
         private void btnConvertirADecimal_Click(object sender, EventArgs e)
         {
             string resultadoss;
-            resultadoss = Numero.BinarioDecimal(txtNumero1.Text);
-            lblResultado.Text =resultadoss;
+            if (lblResultado.Text!=" ")
+            {
+                resultadoss = Numero.BinarioDecimal(lblResultado.Text);
+                lblResultado.Text = resultadoss;
+
+            }
+          
         }
     }
 }

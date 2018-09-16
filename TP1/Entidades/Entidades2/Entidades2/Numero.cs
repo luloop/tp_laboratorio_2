@@ -76,7 +76,7 @@ namespace Entidades2
                 {
                     if (binario[i] == '1')// cada elemento del array es 1
                     {
-                        retorno += Math.Pow(2, j); //suma la potencia de 2 y 
+                        retorno += Math.Pow(2, j-1); //suma la potencia de 2 y 
                     }
                     j--;
 
@@ -122,7 +122,7 @@ namespace Entidades2
             if (Numero!=0)
                return DecimalBinario(Numero);
             else
-              return "ERROR";
+              return "Error";
         }
         
         #endregion
