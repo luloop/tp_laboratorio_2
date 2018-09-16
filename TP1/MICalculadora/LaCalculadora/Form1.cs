@@ -25,7 +25,24 @@ namespace LaCalculadora
 
         private void btnOperar_Click(object sender, EventArgs e)
         {
+            double num1; //lee
+            double num2; // lee
+            double resultadoss = 0;
+            string operador = cmbOperador.Text;
 
+            if (double.TryParse(txtNumero1.Text, out num1))
+            {
+                if (double.TryParse(txtNumero2.Text, out num2))
+                {
+
+                    Numero valor1 = new Numero(num1);
+                    Numero valor2 = new Numero(num2);
+
+                    resultadoss = Calculadora.Operar(valor1, valor2, operador);
+                }
+
+            }
+            lblResultado.Text = Convert.ToString(resultadoss);
         }
 
         private void txtNumero1_TextChanged(object sender, EventArgs e)
@@ -40,6 +57,16 @@ namespace LaCalculadora
             lblResultado.Text = "0";
             
 
+        }
+
+         /// <summary>
+         /// cierra la aplicacion
+         /// </summary>
+         /// <param name="sender"></param>
+         /// <param name="e"></param>
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.ExitThread();
         }
     }
 }

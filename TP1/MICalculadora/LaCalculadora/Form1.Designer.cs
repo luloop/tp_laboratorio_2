@@ -79,6 +79,7 @@
             this.btnCerrar.TabIndex = 4;
             this.btnCerrar.Text = "CERRAR";
             this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnConvertirBinario
             // 

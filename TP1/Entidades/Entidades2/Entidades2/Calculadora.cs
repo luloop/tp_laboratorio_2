@@ -10,30 +10,33 @@ namespace Entidades2
 
         public static double Operar(Numero num1, Numero num2, string operador)
         {
-
-            switch (ValidarOperador(operador))
+            operador = ValidarOperador(operador);
+            switch (operador)
             {
                 case "-":
                     return (num1-num2);
+
                 case "*":
-                    return (num1 * num2);
+                    return (num1*num2);
+
                 case "/":
-                    return (num1 / num2);
+                    return (num1/num2);
+
                 default:
-                    return (num1 + num2);
+                    return (num1+ num2);
             }
         }
 
         private static string ValidarOperador(string operador)
         {
-            switch (operador[0])
+            switch (operador)
             {
-                case '-':
+                case "-":
                     return "-";
-                case '*':
+                case "*":
                     return "*";
-                case '/':
-                    return "*";
+                case "/":
+                    return "/";
                 default:
                     return"+";
             }
