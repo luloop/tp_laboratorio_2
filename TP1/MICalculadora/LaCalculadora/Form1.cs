@@ -34,15 +34,24 @@ namespace LaCalculadora
             {
                 if (double.TryParse(txtNumero2.Text, out num2))
                 {
+                    if (num1 == 0 && operador == "/")
+                    {
+                        lblResultado.Text = "Imposible Dividir";
+                    }
+                    else
+                    {
+                        Numero valor1 = new Numero(num1);
+                        Numero valor2 = new Numero(num2);
 
-                    Numero valor1 = new Numero(num1);
-                    Numero valor2 = new Numero(num2);
+                        resultadoss = Calculadora.Operar(valor1, valor2, operador);
 
-                    resultadoss = Calculadora.Operar(valor1, valor2, operador);
+                        lblResultado.Text = Convert.ToString(resultadoss);
+                    }
+                    
                 }
 
             }
-            lblResultado.Text = Convert.ToString(resultadoss);
+           
         }
 
         private void txtNumero1_TextChanged(object sender, EventArgs e)
@@ -67,6 +76,25 @@ namespace LaCalculadora
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.ExitThread();
+        }
+
+        private void btnConvertirBinario_Click(object sender, EventArgs e)
+        {
+             string resultadoss ;        
+                                        
+               resultadoss = Numero.DecimalBinario (txtNumero1.Text);
+               lblResultado.Text = Convert.ToString(resultadoss);
+                    
+
+              
+
+        }
+
+        private void btnConvertirADecimal_Click(object sender, EventArgs e)
+        {
+            string resultadoss;
+            resultadoss = Numero.BinarioDecimal(txtNumero1.Text);
+            lblResultado.Text =resultadoss;
         }
     }
 }

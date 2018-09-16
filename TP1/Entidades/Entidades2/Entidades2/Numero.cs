@@ -66,7 +66,7 @@ namespace Entidades2
 
                 for (int i = 0; i < binario.Length; i++) //Validacion de caracteres invalidos
                 {
-                    if (binario[i] != '0' || binario[i] != '0')
+                    if (binario[i] != '0' && binario[i] != '1')
                     {
                         return "Error";
                     }
@@ -74,7 +74,7 @@ namespace Entidades2
                                              
                 for (int i = 0; i < binario.Length; i++) 
                 {
-                    if (binario[i] == 1)// cada elemento del array es 1
+                    if (binario[i] == '1')// cada elemento del array es 1
                     {
                         retorno += Math.Pow(2, j); //suma la potencia de 2 y 
                     }
@@ -155,7 +155,7 @@ namespace Entidades2
 
             double aux = 0;
 
-            aux = num1._Numero - num2._Numero;
+            aux = num1._Numero * num2._Numero;
 
             return aux;
         }

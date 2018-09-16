@@ -89,6 +89,7 @@
             this.btnConvertirBinario.TabIndex = 5;
             this.btnConvertirBinario.Text = "Convertir de Binario";
             this.btnConvertirBinario.UseVisualStyleBackColor = true;
+            this.btnConvertirBinario.Click += new System.EventHandler(this.btnConvertirBinario_Click);
             // 
             // btnConvertirADecimal
             // 
@@ -98,6 +99,7 @@
             this.btnConvertirADecimal.TabIndex = 6;
             this.btnConvertirADecimal.Text = "Convertir de Decimal";
             this.btnConvertirADecimal.UseVisualStyleBackColor = true;
+            this.btnConvertirADecimal.Click += new System.EventHandler(this.btnConvertirADecimal_Click);
             // 
             // cmbOperador
             // 
