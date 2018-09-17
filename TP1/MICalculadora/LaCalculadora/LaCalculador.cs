@@ -25,18 +25,28 @@ namespace LaCalculadora
 
         private void btnOperar_Click(object sender, EventArgs e)
         {
-            double num1; //lee
-            double num2; // lee
-            double resultadoss = 0;
-            string operador = cmbOperador.Text;
 
-            if (double.TryParse(txtNumero1.Text, out num1))
+            double resultadoss = Operar(txtNumero1.Text, txtNumero2.Text, cmbOperador.Text);
+            if (resultadoss!= ' ')
             {
-                if (double.TryParse(txtNumero2.Text, out num2))
+                lblResultado.Text = Convert.ToString(resultadoss);
+            }
+            
+        }
+
+    private double Operar(string numero1, string numero2, string operador)
+        {
+            double num1, num2;
+            double resultadoss = ' ';
+
+            if (double.TryParse(numero1, out num1))
+            {
+                if (double.TryParse(numero2, out num2))
                 {
                     if (num1 == 0 && operador == "/")
                     {
-                        lblResultado.Text = "Imposible Dividir";
+                       
+                        lblResultado.Text = "Imposible Dividir";                        
                     }
                     else
                     {
@@ -44,9 +54,7 @@ namespace LaCalculadora
                         Numero valor2 = new Numero(num2);
 
                         resultadoss = Calculadora.Operar(valor1, valor2, operador);
-
-                        lblResultado.Text = Convert.ToString(resultadoss);
-                    }
+                     }
                 }
                 else
                 {
@@ -54,42 +62,14 @@ namespace LaCalculadora
                 }
 
             }
-
             else
             {
                 txtNumero1.Text = "";
                 txtNumero2.Text = "";
             }
-
+            return resultadoss;
         }
 
-      /*  private double Operar(string numero1, string numero2, string operador)
-        {
-            double num1, num2;
-
-            if (double.TryParse(txtNumero1.Text, out num1))
-            {
-                if (double.TryParse(txtNumero2.Text, out num2))
-                {
-                    if (num1 == 0 && operador == "/")
-                    {
-                       return lblResultado.Text = "Imposible Dividir";
-                    }
-                    else
-                    {
-
-
-                        lblResultado.Text = Convert.ToString(resultadoss);
-                    }
-                }
-                else
-                {
-                    txtNumero2.Text = "";
-                }
-
-            }
-        }
-        */
 
         private void txtNumero1_TextChanged(object sender, EventArgs e)
         {

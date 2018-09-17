@@ -131,7 +131,7 @@
             this.lblResultado.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.lblResultado.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lblResultado.Location = new System.Drawing.Point(35, 272);
+            this.lblResultado.Location = new System.Drawing.Point(34, 272);
             this.lblResultado.Name = "lblResultado";
             this.lblResultado.Size = new System.Drawing.Size(242, 36);
             this.lblResultado.TabIndex = 11;
@@ -143,7 +143,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(310, 358);
+            this.ClientSize = new System.Drawing.Size(309, 324);
             this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.txtNumero1);
             this.Controls.Add(this.txtNumero2);

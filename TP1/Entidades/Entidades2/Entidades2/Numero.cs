@@ -57,7 +57,7 @@ namespace Entidades2
             double retorno = 0;
             int j = binario.Length;
 
-            if (binario is null || binario == "") //validacion de NULL o Vacio
+            if (binario == null || binario == "") //validacion de NULL o Vacio
             {
                 return "Error";
             }
@@ -130,48 +130,23 @@ namespace Entidades2
     #region Sobrecarga de Operadores
 
         public static double operator +(Numero num1, Numero num2)
-        {
-            double aux = 0;
-
-            aux = num1._Numero+ num2._Numero;          
-
-            return aux;
+        {  
+           return num1._Numero + num2._Numero;
         }
 
         public static double operator -(Numero num1, Numero num2)
         {
-            ///validaciones de null para todes
-
-            double aux = 0;
-
-            aux = num1._Numero - num2._Numero;
-
-            return aux;
+            return num1._Numero - num2._Numero;
         }
 
         public static double operator *(Numero num1, Numero num2)
         {
-            ///validaciones de null para todes
-
-            double aux = 0;
-
-            aux = num1._Numero * num2._Numero;
-
-            return aux;
+           return num1._Numero * num2._Numero;
         }
 
         public static double operator /(Numero num1, Numero num2)
         {
-            ///validaciones de null para todes
-
-            double aux = 0;
-
-            if (num1._Numero!=0)
-            {
-                aux = num1._Numero / num2._Numero;
-            }            
-
-            return aux;
+           return num1._Numero / num2._Numero;
         }
        
 
