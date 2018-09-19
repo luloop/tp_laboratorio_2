@@ -91,15 +91,15 @@ namespace Entidades2
         public static string DecimalBinario(double numero)
         {
             string binario = "";
+            int numeroAux = (int)numero;
 
-                if (numero < 0)
+                if (numeroAux < 0)
                 {
                     return null;
                 }
-                while (numero > 0)
+                while (numeroAux > 0 )
                 {
-
-                    if (numero % 2 == 1)
+                    if (numeroAux % 2 == 1)
                     {
                         binario = '1' + binario;
                     }
@@ -108,7 +108,7 @@ namespace Entidades2
                         binario = '0' + binario;
                     }
 
-                    numero = (int)numero / 2;
+                numeroAux = numeroAux / 2;
 
                 }
             return binario;
